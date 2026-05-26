@@ -1,0 +1,13 @@
+pandas
+numpy
+scikit-learn
+openpyxl
+matplotlib
+seaborn
+plotly
+skl2onnx
+onnx
+onnxruntime
+psycopg2-binary
+python-dotenv
+jupyter

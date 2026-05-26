@@ -1,0 +1,42 @@
+{
+  "name": "template-typescript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node out/src/index.js",
+    "prestart": "npm run build",
+    "build": "tsc -p tsconfig.json --outDir out",
+    "dev": "nodemon --watch src --ext ts --exec \"ts-node src/index.ts\"",
+    "lint": "eslint . --ext .ts",
+    "test": "ts-node test.ts",
+    "create-image": "docker build -t image .",
+    "create-container": "docker run -d --name container -p 3001:3000 image"
+  },
+  "keywords": [],
+  "author": "@felipe-sant",
+  "license": "ISC",
+  "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/node": "^22.5.4",
+    "@types/pg": "^8.20.0",
+    "@typescript-eslint/eslint-plugin": "^8.48.1",
+    "@typescript-eslint/parser": "^8.48.1",
+    "eslint": "^9.39.1",
+    "globals": "^16.5.0",
+    "jiti": "^2.6.1",
+    "nodemon": "^3.0.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4",
+    "typescript-eslint": "^8.48.1"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "onnxruntime-node": "^1.24.3",
+    "pg": "^8.20.0"
+  }
+}
